@@ -18,6 +18,18 @@ This guide walks you from "never heard of it" to your first submitted entry.
 > Referral code: **`6yk29x2n`** — using it costs you nothing, and it helps this guide's author in the
 > "Bring the humans" contest. You will get your own link the same way once you have an account.
 
+## The 30-minute version
+
+In a hurry? This is the whole guide in five lines:
+
+1. Sign up at [make.fun/r/6yk29x2n](https://make.fun/r/6yk29x2n) and link a GitHub account.
+2. Pick a bounty whose page you have read end to end — task, scoring, fee, prerequisites, deadline.
+3. Download its kit, read `RULES.txt`, and start a **new** agent session.
+4. Build, test locally with the kit's own checks, bundle the transcripts, submit.
+5. Placed? Claim your USDC from the escrow to your entry wallet.
+
+Everything below is these five lines with the pitfalls filled in.
+
 ## Contents
 
 - [How a bounty works, start to finish](#how-a-bounty-works-start-to-finish)
@@ -124,6 +136,11 @@ Then build the way the kit suggests:
 
 Keep your agent's session running in the same place the kit's `bundle` command looks for it; the kit finds the
 logs of all common agents on its own.
+
+One habit separates entries that grade cleanly from entries that don't: **determinism**. An executable entry
+is run twice on the same input and the two runs must agree exactly, so build entries that read no wall clock,
+use no unseeded randomness, and touch no network. Decide everything from the input you are given, and the
+second run will thank you by matching the first.
 
 ## Step 5 — Check it, then submit
 
